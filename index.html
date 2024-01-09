@@ -77,7 +77,18 @@ form button {
     font-family: cairo;
     font-size: 18px;
 }
+form div {
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
+    margin-bottom: 15px;
+    flex-direction: column-reverse; /* Display the radio buttons in a column, reverse order */
 
+}
+
+form input[type="radio"] {
+    margin-right: 5px; /* Adjust as needed */
+}
 @media (max-width: 600px) {
     .container {
         border-radius: 0;
@@ -111,6 +122,18 @@ form button {
         
             <label for="commission-percentage" required>نسبة العمولة</label>
             <input type="text" id="commission-percentage" name="commission-percentage" required>
+
+            <label for="date">تاريخ إيداع المصاريف التشغيلية</label>
+            <input type="date" id="date" name="date" required>
+        
+            <label>إيداع المصاريف التشغيلية</label>
+            <div>
+                <label for="question-yes">نعم</label>
+                <input type="radio" id="question-yes" name="question-answer" value="yes" required>
+        
+                <label for="question-no">لا</label>
+                <input type="radio" id="question-no" name="question-answer" value="no" required>
+            </div>
         
             <button type="submit">إرسال</button>
         </form>
@@ -143,4 +166,3 @@ form button {
             </div>
 </body>
 </html>
-
